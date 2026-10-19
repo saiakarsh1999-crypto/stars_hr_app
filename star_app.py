@@ -244,8 +244,8 @@ sun_hr_pt = alt.Chart(pd.DataFrame({"temp_K": [SUN_T], "lum": [1.0]})).mark_circ
     size=60, color="#1e7d32", opacity=1
 ).encode(x=HR_X, y=HR_Y)
 sun_hr_txt = alt.Chart(pd.DataFrame({"temp_K": [SUN_T], "lum": [2.4]})).mark_text(
-    fontSize=10.5, fontWeight=700, color="#2ea44f", text=alt.value("Sun")
-).encode(x=HR_X, y=HR_Y)
+    fontSize=10.5, fontWeight=700, color="#2ea44f"
+).encode(x=HR_X, y=HR_Y, text=alt.value("Sun"))
 
 # 5. The user's star point riding the mass and age sliders
 you_hr = alt.Chart(grid).transform_filter(pick).mark_point(
